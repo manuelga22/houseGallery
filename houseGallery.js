@@ -16,6 +16,7 @@ function getImageToDisplay(index){
 $(".viewPicture").append(`<img id="imageToDisplay" src=${images[index]}></img>`)
 $(".viewPicture").append(`<button class="btn back-btn btn-primary" id="backBtn">BACK</button>`)
 $('.viewPicture').show();
+$(".view-btn").hide()
 addFunctionalityToBackBtn();
 }
 
@@ -25,6 +26,7 @@ $('#backBtn').click(()=>{
   $("#imageToDisplay").remove();
   $("#backBtn").remove();
   $('.viewPicture').hide();
+  $(".view-btn").show();
 })
 }
 
